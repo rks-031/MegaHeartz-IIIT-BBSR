@@ -4,8 +4,6 @@ MegaHeartz is our college's vibrant pulse, marketing and enhancing our brand. It
 
 **Official mail id**: megaheartz@iiit-bh.ac.in
 
-**Website**: https://rks-031.github.io/MegaHeartz-IIIT-Bh/
-
 # To contribute to the project:
 
 1. `Fork` and `clone`the repo (Use GitHub Desktop or git commands)
