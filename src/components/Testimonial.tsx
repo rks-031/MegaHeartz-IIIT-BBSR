@@ -1,17 +1,11 @@
 import { useState } from "react";
 import Slider from "react-slick";
-import { RiStarFill } from "react-icons/ri";
-import { HiArrowRight, HiArrowLeft } from "react-icons/hi";
 import Title from "./Title";
-import { quote, Rajnish } from "../assets";
-import {
-  FaInstagram,
-  FaLinkedin,
-  FaGithub,
-  FaEnvelope,
-  FaTwitter,
-} from "react-icons/fa";
 import { FadeIn } from "./FadeIn";
+import { HiArrowRight, HiArrowLeft } from "react-icons/hi";
+import { persons } from "../assets/persons";
+import { quote } from "../assets";
+import { FaInstagram, FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
 function SampleNextArrow(props: any) {
   const { onClick } = props;
@@ -104,162 +98,78 @@ const Testimonial = () => {
           <Title title="The Mega Family" des="Meet the Team" />
         </div>
         <div className="max-w-6xl mx-auto">
-          {/* ================ Slider One ================== */}
           <Slider {...settings}>
-            <div className="w-full">
-              <div className="w-full h-auto flex flex-col lgl:flex-row justify-between">
-                <div className="w-full lgl:w-[35%] h-full bg-gradient-to-r from-[#1e2024] to-[#23272b] p-8 rounded-lg shadow-shadowOne flex flex-col md:flex-row lgl:flex-col gap-8 justify-center md:justify-start lgl:justify-center">
-                  <img
-                    className="h-72 md:h-32 lgl:h-72 rounded-lg object-cover"
-                    src={Rajnish}
-                    alt="Rajnish"
-                  />
-                  <div className="w-full flex flex-col justify-end">
-                    <h3 className="text-2xl font-bold">Rajnish Kumar Singh</h3>
-                    <p className="text-base tracking-wide text-gray-500">
-                      B421037, CSE
-                    </p>
-                  </div>
-                </div>
-                <div className="w-full lgl:w-[60%] h-full flex flex-col justify-between">
-                  <img className="w-20 lgl:w-32" src={quote} alt="quote" />
-                  <div className="w-full h-[70%] py-10 bg-gradient-to-r from-[#1e2024] to-[#23272b] rounded-lg shadow-shadowOne p-4 lgl:p-8 flex flex-col justify-center gap-4 lgl:gap-8">
-                    <div className="flex flex-col justify-between lgl:items-center py-6 border-b-2 border-b-gray-900">
-                      <div>
-                        <h3 className="text-xl lgl:text-2xl font-medium tracking-wide">
-                          Secretary (2023-24)
-                        </h3>
-                      </div>
+            {persons.map((person) => (
+              <div key={person.id} className="w-full">
+                <div className="w-full h-auto flex flex-col lgl:flex-row justify-between">
+                  <div className="w-full lgl:w-[35%] h-full bg-gradient-to-r from-[#1e2024] to-[#23272b] p-8 rounded-lg shadow-shadowOne flex flex-col md:flex-row lgl:flex-col gap-8 justify-center md:justify-start lgl:justify-center">
+                    <img
+                      className="h-72 md:h-32 lgl:h-72 rounded-lg object-cover"
+                      src={person.image}
+                      alt={person.name}
+                    />
+                    <div className="w-full flex flex-col justify-end">
+                      <h3 className="text-2xl font-bold">{person.name}</h3>
+                      <p className="text-base tracking-wide text-gray-500">
+                        {person.department}
+                      </p>
                     </div>
-                    <p className="text-base font-titleFont text-gray-400 font-medium tracking-wide leading-6">
-                      Reach me out:
-                      <br />
-                      <a
-                        href="https://www.instagram.com/rks_031/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-500 hover:underline"
-                      >
-                        <FaInstagram className="inline-block" /> Instagram
-                      </a>
-                      <br />
-                      <a
-                        href="https://www.linkedin.com/in/rajnish-kumar-singh-2241b321b/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-500 hover:underline"
-                      >
-                        <FaLinkedin className="inline-block" /> LinkedIn
-                      </a>
-                      <br />
-                      <a
-                        href="https://github.com/rks-031"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-500 hover:underline"
-                      >
-                        <FaGithub className="inline-block" /> GitHub
-                      </a>
-                      <br />
-                      <a
-                        href="mailto:rajnish31july@gmail.com"
-                        className="text-blue-500 hover:underline"
-                      >
-                        <FaEnvelope className="inline-block" /> Email
-                      </a>
-                      <br />
-                      <a
-                        href="https://x.com/rks_031?s=08"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-500 hover:underline"
-                      >
-                        <FaTwitter className="inline-block" /> Twitter
-                      </a>
-                      .
-                    </p>
+                  </div>
+                  <div className="w-full lgl:w-[60%] h-full flex flex-col justify-between">
+                    {/* Display quote, role, and social links */}
+                    <img className="w-20 lgl:w-32" src={quote} alt="quote" />
+                    <div className="w-full h-[70%] py-10 bg-gradient-to-r from-[#1e2024] to-[#23272b] rounded-lg shadow-shadowOne p-4 lgl:p-8 flex flex-col justify-center gap-4 lgl:gap-8">
+                      <div className="flex flex-col justify-between lgl:items-center py-6 border-b-2 border-b-gray-900">
+                        <div>
+                          <h3 className="text-xl lgl:text-2xl font-medium tracking-wide">
+                            {person.role}
+                          </h3>
+                        </div>
+                      </div>
+                      {/* Display social links */}
+                      <p className="text-base font-titleFont text-gray-400 font-medium tracking-wide leading-6">
+                        Reach me out:
+                        <br />
+                        <a
+                          href={person.links.instagram}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-500 hover:underline"
+                        >
+                          <FaInstagram className="inline-block" /> Instagram
+                        </a>
+                        <br />
+                        <a
+                          href={person.links.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-500 hover:underline"
+                        >
+                          <FaLinkedin className="inline-block" /> LinkedIn
+                        </a>
+                        <br />
+                        <a
+                          href={person.links.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-500 hover:underline"
+                        >
+                          <FaGithub className="inline-block" /> GitHub
+                        </a>
+                        <br />
+                        <a
+                          href={`mailto:${person.links.email}`}
+                          className="text-blue-500 hover:underline"
+                        >
+                          <FaEnvelope className="inline-block" /> Email
+                        </a>
+                        <br />
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            {/* ================ Slider Two ================== */}
-
-            <div className="w-full">
-              <div className="w-full h-auto flex flex-col lgl:flex-row justify-between">
-                <div className="w-full lgl:w-[35%] h-full bg-gradient-to-r from-[#1e2024] to-[#23272b] p-8 rounded-lg shadow-shadowOne flex flex-col md:flex-row lgl:flex-col gap-8 justify-center md:justify-start lgl:justify-center">
-                  <img
-                    className="h-72 md:h-32 lgl:h-72 rounded-lg object-cover"
-                    src={Rajnish}
-                    alt="Rajnish"
-                  />
-                  <div className="w-full flex flex-col justify-end">
-                    <h3 className="text-2xl font-bold">Rajnish Kumar Singh</h3>
-                    <p className="text-base tracking-wide text-gray-500">
-                      B421037, CSE
-                    </p>
-                  </div>
-                </div>
-                <div className="w-full lgl:w-[60%] h-full flex flex-col justify-between">
-                  <img className="w-20 lgl:w-32" src={quote} alt="quote" />
-                  <div className="w-full h-[70%] py-10 bg-gradient-to-r from-[#1e2024] to-[#23272b] rounded-lg shadow-shadowOne p-4 lgl:p-8 flex flex-col justify-center gap-4 lgl:gap-8">
-                    <div className="flex flex-col justify-between lgl:items-center py-6 border-b-2 border-b-gray-900">
-                      <div>
-                        <h3 className="text-xl lgl:text-2xl font-medium tracking-wide">
-                          Secretary (2023-24)
-                        </h3>
-                      </div>
-                    </div>
-                    <p className="text-base font-titleFont text-gray-400 font-medium tracking-wide leading-6">
-                      Reach me out:
-                      <br />
-                      <a
-                        href="https://www.instagram.com/rks_031/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-500 hover:underline"
-                      >
-                        <FaInstagram className="inline-block" /> Instagram
-                      </a>
-                      <br />
-                      <a
-                        href="https://www.linkedin.com/in/rajnish-kumar-singh-2241b321b/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-500 hover:underline"
-                      >
-                        <FaLinkedin className="inline-block" /> LinkedIn
-                      </a>
-                      <br />
-                      <a
-                        href="https://github.com/rks-031"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-500 hover:underline"
-                      >
-                        <FaGithub className="inline-block" /> GitHub
-                      </a>
-                      <br />
-                      <a
-                        href="mailto:rajnish31july@gmail.com"
-                        className="text-blue-500 hover:underline"
-                      >
-                        <FaEnvelope className="inline-block" /> Email
-                      </a>
-                      <br />
-                      <a
-                        href="https://x.com/rks_031?s=08"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-500 hover:underline"
-                      >
-                        <FaTwitter className="inline-block" /> Twitter
-                      </a>
-                      .
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </Slider>
         </div>
       </FadeIn>
