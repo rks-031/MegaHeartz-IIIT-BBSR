@@ -83,7 +83,7 @@ const Navbar = () => {
                     </span>
                   </a>
                   <a
-                    href="https://www.facebook.com/Noorlalu143/"
+                    href="https://www.instagram.com/megaheartz_iiitbh/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
