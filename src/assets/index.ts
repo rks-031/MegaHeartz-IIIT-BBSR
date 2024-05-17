@@ -1,5 +1,5 @@
 import logo from "./images/logo.png";
-import bannerImg from "./images/bannerImg.png";
+import bannerImg from "./images/bannerImg.jpg";
 import freshers from "./images/projects/freshers.jpg";
 import GCAftermovie from "./images/projects/GCAftermovie.webp";
 import janmashtami from "./images/projects/janmashtami.jpg";
@@ -48,8 +48,8 @@ import Akshita from "./images/testmonial/Akshita.svg";
 import Arunanshu from "./images/testmonial/Arunanshu.svg";
 import Anwesha from "./images/testmonial/Anwesha.svg";
 import quote from "./images/testmonial/quote.png";
-import contactImg from "./images/contact/contactImg.png";
 import chandrika from "./images/testmonial/chandrika.svg";
+import contactImg from "./images/contact/contactImg.png";
 
 export {
   logo,
@@ -65,6 +65,7 @@ export {
   republic,
   sapphire,
   tasveer,
+  chandrika,
   tms,
   Suraj,
   Kalyan,
@@ -101,7 +102,6 @@ export {
   Anwesha,
   Rohnit,
   Krishna,
-  chandrika,
   quote,
   contactImg,
 };

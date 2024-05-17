@@ -90,7 +90,7 @@ const Testimonial = () => {
   };
   return (
     <section
-      id="testimonial"
+      id="team"
       className="w-full py-20 border-b-[1px] border-b-gray-700"
     >
       <FadeIn>
