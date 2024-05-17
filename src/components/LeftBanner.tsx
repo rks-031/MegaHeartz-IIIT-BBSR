@@ -41,6 +41,7 @@ const LeftBanner = () => {
             <a
               href="https://www.youtube.com/@MegaheartzIIITBhubaneswar"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <span className="bannerIcon">
                 <FaYoutube />
@@ -49,6 +50,7 @@ const LeftBanner = () => {
             <a
               href="https://www.instagram.com/megaheartz_iiitbh/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <span className="bannerIcon">
                 <FaInstagram />

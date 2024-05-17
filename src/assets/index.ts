@@ -1,5 +1,5 @@
 import logo from "./images/logo.png";
-import bannerImg from "./images/bannerImg.jpg";
+import bannerImg from "./images/bannerImg.png";
 import freshers from "./images/projects/freshers.jpg";
 import GCAftermovie from "./images/projects/GCAftermovie.webp";
 import janmashtami from "./images/projects/janmashtami.jpg";
