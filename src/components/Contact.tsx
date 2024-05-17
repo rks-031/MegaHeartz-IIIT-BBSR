@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "emailjs-com";
 import Title from "./Title";
 import { FadeIn } from "./FadeIn";
 
@@ -13,7 +14,7 @@ const Contact = () => {
 
   const emailValidation = (email) => {
     return String(email)
-      .toLocaleLowerCase()
+      .toLowerCase()
       .match(/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/);
   };
 
@@ -32,15 +33,39 @@ const Contact = () => {
     } else if (message === "") {
       setErrMsg("Message is required!");
     } else {
-      setSuccessMsg(
-        `Thank you dear ${username}, Your Messages has been sent Successfully!`
-      );
-      setErrMsg("");
-      setUsername("");
-      setPhoneNumber("");
-      setEmail("");
-      setSubject("");
-      setMessage("");
+      const templateParams = {
+        username,
+        phoneNumber,
+        email,
+        subject,
+        message,
+      };
+
+      emailjs
+        .send(
+          "service_di9qqse", // Replace with your EmailJS service ID
+          "template_tkn8i5m", // Replace with your EmailJS template ID
+          templateParams,
+          "3ahI6yNUw6KRdJJDL" // Replace with your EmailJS user ID
+        )
+        .then(
+          (response) => {
+            console.log("SUCCESS!", response.status, response.text);
+            setSuccessMsg(
+              `Thank you dear ${username}, Your message has been sent successfully!`
+            );
+            setErrMsg("");
+            setUsername("");
+            setPhoneNumber("");
+            setEmail("");
+            setSubject("");
+            setMessage("");
+          },
+          (error) => {
+            console.log("FAILED...", error);
+            setErrMsg("Failed to send your message, please try again.");
+          }
+        );
     }
   };
 
@@ -56,7 +81,10 @@ const Contact = () => {
         <div className="w-full max-w-3xl">
           <div className="w-full h-auto flex flex-col justify-center items-center">
             <div className="w-full h-full py-10 bg-gradient-to-r from-[#0B1120] to-[#0B1120] flex flex-col gap-8 p-4 rounded-lg shadow-shadowOne">
-              <form className="w-full flex flex-col gap-4">
+              <form
+                className="w-full flex flex-col gap-4"
+                onSubmit={handleSend}
+              >
                 {errMsg && (
                   <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne text-center text-orange-500 text-base tracking-wide animate-bounce">
                     {errMsg}
@@ -129,7 +157,7 @@ const Contact = () => {
                 </div>
                 <div className="w-full">
                   <button
-                    onClick={handleSend}
+                    type="submit"
                     className="w-full h-12 bg-[#141518] rounded-lg text-base text-gray-400 tracking-wider uppercase hover:text-white duration-300 hover:border-[1px] hover:border-designColor border-gray-600 border"
                   >
                     Send Message

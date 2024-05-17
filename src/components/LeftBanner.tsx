@@ -1,5 +1,5 @@
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import { FaYoutube, FaInstagram } from "react-icons/fa";
+import { FaYoutube, FaInstagram, FaFileAlt } from "react-icons/fa";
 import { FadeIn } from "./FadeIn";
 
 const LeftBanner = () => {
@@ -12,7 +12,7 @@ const LeftBanner = () => {
   });
 
   return (
-    <FadeIn className="w-full lg:w-1/2 flex flex-col gap-20">
+    <FadeIn className="w-full lg:w-3/4 flex flex-col gap-20 items-center text-center lg:text-left">
       <div className="w-full flex flex-col gap-5">
         <h1 className="text-6xl font-bold text-white">
           IIIT <span className="text-designColor capitalize">MegaHeartz</span>
@@ -32,7 +32,7 @@ const LeftBanner = () => {
           unity among students.
         </p>
       </div>
-      <div className="flex flex-col xl:flex-row gap-6 lgl:gap-0 justify-between">
+      <div className="w-full flex flex-col xl:flex-row gap-6 lgl:gap-0 justify-between">
         <div>
           <h2 className="text-base uppercase font-titleFont mb-4 text-white">
             Find us on
@@ -54,6 +54,15 @@ const LeftBanner = () => {
             >
               <span className="bannerIcon">
                 <FaInstagram />
+              </span>
+            </a>
+            <a
+              href="https://drive.google.com/uc?export=download&id=16Oi5beLjR8ouvMouEQMVKf9k7mpSBTAP"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="bannerIcon">
+                <FaFileAlt />
               </span>
             </a>
           </div>
