@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, FormEvent } from "react";
 import emailjs from "emailjs-com";
 import Title from "./Title";
 import { FadeIn } from "./FadeIn";
@@ -12,13 +12,13 @@ const Contact = () => {
   const [errMsg, setErrMsg] = useState("");
   const [successMsg, setSuccessMsg] = useState("");
 
-  const emailValidation = (email) => {
+  const emailValidation = (email: string) => {
     return String(email)
       .toLowerCase()
       .match(/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/);
   };
 
-  const handleSend = (e) => {
+  const handleSend = (e: FormEvent) => {
     e.preventDefault();
     if (username === "") {
       setErrMsg("Username is required!");
