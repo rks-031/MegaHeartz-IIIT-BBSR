@@ -12,7 +12,7 @@ const LeftBanner = () => {
   });
 
   return (
-    <FadeIn className="w-full lg:w-3/4 flex flex-col gap-20 items-center text-center lg:text-left">
+    <FadeIn className="w-full lg:w-3/4 flex flex-col gap-20 lg:items-center text-left">
       <div className="w-full flex flex-col gap-5">
         <br />
         <h1 className="text-6xl font-bold text-white">
