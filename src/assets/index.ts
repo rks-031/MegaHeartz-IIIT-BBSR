@@ -15,6 +15,7 @@ import independence from "./images/projects/independence.jpg";
 import Suraj from "./images/testmonial/Suraj.svg";
 import Kalyan from "./images/testmonial/Kalyan.svg";
 import Aditya from "./images/testmonial/Aditya.svg";
+import Saswati from "./images/testmonial/Saswati.svg";
 import Rajnish from "./images/testmonial/Rajnish.svg";
 import Rudransh from "./images/testmonial/Rudransh.svg";
 import Ravi from "./images/testmonial/Ravi.svg";
@@ -70,6 +71,7 @@ export {
   Suraj,
   Kalyan,
   Aditya,
+  Saswati,
   Rajnish,
   Rudransh,
   Ravi,
