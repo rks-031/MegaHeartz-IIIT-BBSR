@@ -7,7 +7,7 @@ import kalakritiAftermovie from "./images/projects/kalakritiAftermovie.webp";
 import lazyDance from "./images/projects/lazyDance.jpg";
 import navratriAftermovie from "./images/projects/navratriAftermovie.webp";
 import nebulae from "./images/projects/nebulae.jpg";
-import republic from "./images/projects/republic.png";
+import republic from "./images/projects/REPUBLIC.png";
 import sapphire from "./images/projects/sapphire.jpg";
 import tasveer from "./images/projects/tasveer.jpg";
 import tms from "./images/projects/tms.jpg";
