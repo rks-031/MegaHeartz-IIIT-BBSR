@@ -27,3 +27,11 @@
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+@media (max-width:460px){
+  #home h1{
+    font-size: 45px;
+  }
+  #home h2{
+    font-size: 30px;
+  }
+}

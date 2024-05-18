@@ -57,6 +57,7 @@ const Testimonial = () => {
             gap: "15px",
             justifyContent: "center",
             marginTop: "20px",
+            overflow:"hidden",
           }}
         >
           {" "}
