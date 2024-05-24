@@ -4,7 +4,7 @@ MegaHeartz is our college's vibrant pulse, marketing and enhancing our brand. It
 
 **Official mail id**: megaheartz@iiit-bh.ac.in
 
-**Website Link**: https://megaheartz-iiitbh.onrender.com/
+**Website Link**: https://megaheartz-iiitbbsr.onrender.com/
 
 # To contribute to the project:
 
