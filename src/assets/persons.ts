@@ -217,7 +217,7 @@ export const persons = [
     },
     {
       id: "14",
-      name: "Saumyajeet Verma",
+      name: "Saumyajeet Varma",
       department: "CE",
       role: "Graphics Lead (2024-25)",
       image: Saumyajeet,

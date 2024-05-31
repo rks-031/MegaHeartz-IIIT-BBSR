@@ -40,7 +40,7 @@ const Projects = () => {
             youtubeLink="https://youtu.be/GBHYGlLd8Uk?si=TWN0nuao5jaQsBgF"
           />
           <ProjectsCard
-            title="Freshers Intro 2024"
+            title="Freshers Intro 2023"
             des="An exciting welcome to the new academic year."
             src={freshers}
             youtubeLink="https://youtu.be/ADDnp6mUOZA?si=EOy4ZTuSSGdXIT3D"
